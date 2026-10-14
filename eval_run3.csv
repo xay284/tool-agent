@@ -1,0 +1,25 @@
+﻿question,expected,used,tool_selection_ok,n_calls,tool_errors,answer,missing_tools,extra_tools
+What is 17.5% of 2480?,['calculator'],['calculator'],True,1,0,17.5 % of 2 480 is **434**.,[],[]
+What's the weather in Tunis right now?,['get_weather'],['get_weather'],True,1,0,"Tunis'in şu anki hava durumu (15:30, 14 Ekim 2026):
+- Sıcaklık: **25.7 °C**
+- Rüzgar hızı: **13.2 km/s**
+- Yağış: **0 mm** (yağmur yok)
+
+3 günlük tahmin:
+- 14 Ekim: 16.1 °C – 26.7 °C, yağış yok
+- 15 E",[],[]
+Convert 300 EUR to TND.,['convert_currency'],['convert_currency'],True,1,0,300 EUR ≈ 1 008.63 TND (based on the current exchange rate of 1 EUR ≈ 3.3621 TND).,[],[]
+Who was Ibn Khaldun?,['search_wikipedia'],[],False,0,0,"Ibn Khaldūn (1332 – 1406) was a North‑African Arab scholar, historian, and social‑scientist, best known for his groundbreaking work **“Muqaddimah”** (or “Prolegomena”) written in 1377. In this introdu",['search_wikipedia'],[]
+Weather in Paris and convert 100 USD to EUR.,"['convert_currency', 'get_weather']","['convert_currency', 'get_weather']",True,2,0,"**Weather in Paris (France)**  
+- **Current (2026‑10‑14, 16:30):** 20 °C, light wind (1.4 m/s), no precipitation.  
+- **3‑day forecast:**  
+  - **Oct 14:** High 20.5 °C / Low 11.3 °C, 0 mm rain.  
+  -",[],[]
+What is (3.2 * 45) + 18 ** 2?,['calculator'],['calculator'],True,1,0,The result is **468**.,[],[]
+Tell me about Carthage and what the weather is there.,"['get_weather', 'search_wikipedia']","['get_weather', 'search_wikipedia']",True,2,0,"**Carthage (Tunisia)**  
+Carthage was an ancient Phoenician city founded by the legendary queen Dido on the eastern shore of what is now Lake Tunis in modern‑day Tunisia. It grew into a major Mediterr",[],[]
+Say hello in French.,[],[],True,0,0,Bonjour!,[],[]
+What is the capital of Tunisia?,[],['search_wikipedia'],False,1,1,Tunisia'nin başkenti **Tunis**'tir.,[],['search_wikipedia']
+Weather in Qwxzyland?,['get_weather'],['get_weather'],True,1,1,"I’m sorry, but I couldn’t find any weather data for “Qwxzyland.” It appears to be an unknown or fictional location. If you have a different city in mind, let me know and I can check the forecast for y",[],[]
+"I have 1200 TND. How many USD is that, minus 15% fees?","['calculator', 'convert_currency']","['calculator', 'convert_currency']",True,2,0,"1200 TND ≈ 399.38 USD. After deducting a 15 % fee, you would receive about **339.47 USD**.",[],[]
+Quelle est la température à Sfax ?,['get_weather'],['get_weather'],True,1,0,"À Sfax, il fait actuellement **26,6 °C**. (Données météo du 14 octobre 2026.)",[],[]

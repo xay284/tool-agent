@@ -35,12 +35,16 @@ def main():
             "n_calls": len(trace),
             "tool_errors": errors,
             "answer": answer[:200],
+            "missing_tools": sorted(case["expected"] - used),
+            "extra_tools": sorted(used - case["expected"]),
         })
         print(f"{'OK ' if rows[-1]['tool_selection_ok'] else 'FAIL'} | {case['q']}")
         time.sleep(2)  # stay under free-tier rate limits
     df = pd.DataFrame(rows)
     df.to_csv("eval_results.csv", index=False, encoding="utf-8-sig")
-    print(f"\nTool selection accuracy: {df.tool_selection_ok.mean():.0%} ({df.tool_selection_ok.sum()}/{len(df)})")
+    print(f"\nExact match: {df.tool_selection_ok.mean():.0%} ({df.tool_selection_ok.sum()}/{len(df)})")
+    print(f"Cases with a missing required tool: {(df.missing_tools.str.len() > 0).sum()}")
+    print(f"Cases with an unnecessary extra tool: {(df.extra_tools.str.len() > 0).sum()}")
 
 
 if __name__ == "__main__":
